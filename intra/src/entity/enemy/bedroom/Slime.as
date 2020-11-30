@@ -32,6 +32,7 @@ package entity.enemy.bedroom
 		
 		private var state:int = 0;
 		private var s_dead:int = 1;
+		private var timer:int = 0;
 		private  var dropped_health:Boolean = false;
 		
 		public var type:int;
@@ -82,7 +83,7 @@ package entity.enemy.bedroom
 			if (frame_type != RISE_T) {
 				play("Move");
 			} else {
-				visible = false;
+				visible = true;
 				solid = true;
 			}
             local_id = _local_id;
@@ -197,15 +198,17 @@ package entity.enemy.bedroom
 			
 			// Broken
 			if (type == RISE_T) {
-				if (Registry.EVENT_OPEN_BROOM) {
-					if (!played_rise) {
+				if (gotHit) {
+					if (!played_rise || timer > 0) {
 						play("Rise");
 						solid = true;
 						visible = true;
+						this.parabola_thing = new Parabola_Thing(this, 32, 0.8 + 0.5 * Math.random(), "offset", "y")
+						timer = timer - FlxG.elapsed
+					if (timer == 0) timer = 2;
 					}
 					if (frame == 0) play("Move");
 				} else {
-					return;
 				}
 			}
 			/* If dead, disappear, otherwise, change direction */

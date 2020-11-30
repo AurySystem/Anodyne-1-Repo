@@ -77,6 +77,7 @@ public class Registry {
 	public static var subgroup_gas:Array = new Array();
 	public static var subgroup_spike_rollers:Array = new Array();
 	public static var subgroup_destroyems:Array = new Array();
+	public static var subgroup_blocks:Array = new Array();
 	
 	/* Input, sound, state entities */
     public static var keywatch:Keys;

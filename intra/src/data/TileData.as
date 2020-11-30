@@ -38,6 +38,7 @@ package data
 		[Embed(source = "../res/tilemaps/space_tilemap.png")] public static var Space_Tiles:Class;
 		[Embed(source = "../res/tilemaps/suburb_tilemap.png")] public static var Suburb_Tiles:Class;
 		[Embed(source = "../res/tilemaps/go_tilemap.png")] public static var Go_Tiles:Class;
+		[Embed(source = "../res/tilemaps/home_tilemap.png")] public static var Home_Tiles:Class;
 		
 		
 		
@@ -827,7 +828,15 @@ package data
 				curMapBuf.setTileProperties(170, FlxObject.NONE, null, null, 14); 
 				curMapBuf.setTileProperties(194, FlxObject.NONE,conveyer,Player);
 				CUR_MAP_HAS_CONVEYERS = true;
-			}
+			}else if (Registry.CURRENT_MAP_NAME == "HOME") {
+				curMapBuf.setTileProperties(90, FlxObject.NONE, null, null, 40); 
+				
+				if (curMapBuf == Registry.GAMESTATE.curMapBuf)  {
+					curMapBuf.setTileProperties(0, FlxObject.ANY);
+				}
+				
+				curMapBuf.setTileProperties(140, FlxObject.NONE); 
+		}
 			
 		}
 		

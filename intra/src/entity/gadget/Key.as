@@ -44,6 +44,7 @@ package entity.gadget
 			
 			if (player.overlaps(this) && visible) {
 				Registry.change_nr_keys(1);
+				Registry.GAMESTATE.number_of_keys_text.text = "x" + Registry.get_nr_keys().toString();
 				Registry.sound_data.get_key.play();
 				xml.@alive = "false";
 				visible = false;

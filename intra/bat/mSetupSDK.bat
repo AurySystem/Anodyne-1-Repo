@@ -3,7 +3,7 @@
 :: Path to Flex SDK
 :: 	set FLEX_SDK=D:\programs\flashdevelop\Tools\flex4.6_air_3.8
 :: set FLEX_SDK=D:\programs\flashdevelop\Tools\flex4.6_newair	
-set FLEX_SDK=C:\Users\hantani\Documents\Anodyne 1 Repo\installation files\flex_sdk_4.6
+set FLEX_SDK=C:\Users\Madd\Desktop\Temp projects\Anodyne 1 Binaries\flex_sdk_4.6
 
 :: Path to Android SDK
 set ANDROID_SDK=D:\programs\flashdevelop\Tools\android

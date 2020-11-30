@@ -113,6 +113,8 @@ package data
 		
 		[Embed(source = "../csv/DRAWER_BG.csv", mimeType = "application/octet-stream")] public static var DRAWER_BG:Class;
 		
+		[Embed(source = "../csv/HOME_BG.csv", mimeType = "application/octet-stream")] public static var HOME_BG:Class;
+		
 		
 		/* Minimaps */
 		[Embed (source = "../csv/Minimap_Street.csv", mimeType = "application/octet-stream")] public static var MM_Street:Class;
@@ -311,6 +313,12 @@ package data
 				CSV = new SPACE_BG();
 				}
 				
+			} else if (mapName == "HOME") {
+				if (layer == 1) {
+					CSV = new HOME_BG();
+				} else {
+					CSV = new HOME_BG();
+				}
 			}
 		
             return CSV;

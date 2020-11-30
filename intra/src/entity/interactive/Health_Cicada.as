@@ -136,6 +136,8 @@ package entity.interactive
 						start(x, y, tl.x - 16, tl.y + 30);
 					} else if (Registry.CURRENT_MAP_NAME == "BEACH") {
 						start(x, y, tl.x - 16, tl.y + 30);
+					} else if (Registry.CURRENT_MAP_NAME == "STREET") {
+						start(x, y, tl.x - 16, tl.y + 30);
 					}
 					
 					break;
