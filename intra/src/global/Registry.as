@@ -418,6 +418,9 @@ public class Registry {
 		while (subgroup_spike_rollers.length > 0) {
 			subgroup_spike_rollers.pop();
 		}
+		while (subgroup_blocks.length > 0) {
+			subgroup_blocks.pop();
+		}
 		
 		subgroup_spike_rollers = null;
 		subgroup_spike_rollers = new Array();
@@ -430,7 +433,7 @@ public class Registry {
 		subgroup_gas = new Array();
 		
 		// SHOULD ALL BE ZEROS
-		trace(subgroup_dust.length, subgroup_propelled.length, subgroup_interactives.length, subgroup_on_off_lasers.length, subgroup_switch_pillars.length, subgroup_spike_rollers.length, subgroup_gates.length, subgroup_dash_traps.length, subgroup_gas.length);
+		trace(subgroup_dust.length, subgroup_propelled.length, subgroup_interactives.length, subgroup_on_off_lasers.length, subgroup_switch_pillars.length, subgroup_spike_rollers.length, subgroup_gates.length, subgroup_dash_traps.length, subgroup_gas.length, subgroup_blocks.length);
 	}
 	
     public static function checkDoorInfo():void {

@@ -203,7 +203,7 @@ package entity.enemy.bedroom
 						play("Rise");
 						solid = true;
 						visible = true;
-						this.parabola_thing = new Parabola_Thing(this, 32, 0.8 + 0.5 * Math.random(), "offset", "y")
+						parabola_thing = new Parabola_Thing(this, 32, 0.8 + 0.5 * Math.random(), "offset", "y")
 						timer = timer - FlxG.elapsed
 					if (timer == 0) timer = 2;
 					}

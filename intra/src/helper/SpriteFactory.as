@@ -73,8 +73,9 @@ package helper
                 return 0;
             }  else if (name == "SinglePushBlock") {
                 var spb:SinglePushBlock = new SinglePushBlock(x, y, sprite,player,parent_state as PlayState);
+				sprite.@p = "2";
                 gridObjects.push(spb);
-                return -1;
+                return 0;
             } else if (name == "Door") {
                 newSprite = new Door(x, y, sprite, parent_state);
                 parent_state.bg_sprites.add(newSprite);

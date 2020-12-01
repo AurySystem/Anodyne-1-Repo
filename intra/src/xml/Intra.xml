@@ -642,6 +642,9 @@
 		<Sage x="320" y="160" guid="14717F7B-3E0A-959A-BE17-1333AF6CE252" frame="0"/>
 		<Sage x="320" y="320" guid="D28A5024-01D4-2A18-ADD5-935CCB90002C" frame="1"/>
 		<Door x="112" y="112" guid="90981B27-CF1D-5469-818E-77940C239C02" frame="6" type="4" />
+		<SinglePushBlock x="352" y="208" guid="9A02992F-2A59-0C0D-59B3-E7C36CE755B7" frame="4" type="1" />
+		<SinglePushBlock x="352" y="224" guid="5A079F7B-7232-7E3A-AA0A-B8D51B693223" frame="2" type="1" />
+		<SinglePushBlock x="384" y="176" guid="CDBEF3FB-2C9A-F4E8-B784-A2DEEEF763E6" frame="2" type="1" />
 	</map>
 	<map name="BLUE" type="Stateless">
 		<Button x="16" y="544" guid="FC137588-56CF-4B5A-E5B0-4C3468806B9F" frame="0"/>
@@ -2861,8 +2864,6 @@
 	</map>
 	<map name="STREET" type="Stateful">
 		<Door x="528" y="224" guid="0451D211-C1BC-B510-BC86-D93D94A3998F" frame="2" type="4" />
-		<Contort x="240" y="224" guid="32E08371-7DD8-E3D2-8ADA-931DD6A71B0D" frame="1" p="1" alive="true"/>
-		<Contort x="224" y="272" guid="03B431CB-9A40-4876-71DC-5877DB0397CB" frame="1" p="1" alive="true"/>
 		<Follower_Bro x="208" y="458" guid="0ED7AE3A-B0FB-8EBB-1B2D-D9973FBD36FE" frame="0" p="2" alive="true"/>
 		<Gate x="240" y="512" guid="4C93E608-4B03-BFAB-52B7-AC885D7A1AF8" frame="0" alive="true"/>
 		<Slime x="256" y="576" guid="4313BAAB-5AF4-708B-FD5F-8A08368386D9" frame="1" p="1" alive="true"/>

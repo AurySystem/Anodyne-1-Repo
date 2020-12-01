@@ -14,6 +14,7 @@ package entity.gadget
 	 *	Single push blocks...push em from one direction, they move a tile. yeah WHAT
 	 * @author seagaia
 	 */
+	//Aury: rework most of this in this in a hacky way cuz what
 	public class SinglePushBlock extends FlxSprite
 	{
 		private var dir:int;
@@ -32,6 +33,7 @@ package entity.gadget
 		public var sentrt:FlxSprite = new FlxSprite(x, y);
         public var timeToPush:Number = 0.3;
         public var initial_coords:Point = new Point();
+        public var final_coords:Point = new Point();
         public var MOVE_VEL:int = 24;
 		public var INCREMENTED_REG:Boolean = false;
 		public var BEDROOM_INDEX:int = 4;
@@ -77,7 +79,6 @@ package entity.gadget
                     sentrt.y = y;
 					sentrt.exists = true;
 					detector.add(sentrt)
-					parent.bg_sprites.add(detector);
 					
             switch (parseInt(xml.@frame) % 6) {
                 case 0: pushdir = FlxObject.UP; break;
@@ -103,6 +104,7 @@ package entity.gadget
 			}
 			immovable = true;
 			arrayIndex = Registry.subgroup_blocks.length;
+			trace(arrayIndex);
 			Registry.subgroup_blocks.push(this);
 			
 		}
@@ -124,17 +126,18 @@ package entity.gadget
 			updateSentinel();
 			
 				if (FlxG.collide( player, this)) {
-				if(pushdir != FlxObject.NONE && (pushdir == dir || pushdir == FlxObject.ANY)){
+				if (pushdir != FlxObject.NONE && (pushdir == dir || pushdir == FlxObject.ANY)){
+					//actually lets just pop off the collision if it's within the last two pixels
+					if ((Math.abs(x - initial_coords.x) >= 14 || Math.abs(y - initial_coords.y) >= 14)) {
+					}else{
 					switch (dir) {
 						case FlxObject.UP:
 							if (checkOtherBlocks(sentdw) || FlxG.collide(sentdw, parent.curMapBuf) || FlxG.collide(sentdw, parent.map_bg_2)){
-								trace(hasBeenPushed+" pushed");
-								trace(FlxG.collide(sentdw, parent.curMapBuf)+" mapbg");
-								trace(FlxG.collide(sentdw, parent.map_bg_2)+" mapbg2");
-								trace(checkOtherBlocks(sentdw)+" other blocks");
-								trace(initial_coords + " starting location")
-								trace(this.x +", "+ this.y + " current location")
-								sentdw.makeGraphic(16, 2, 0xFFFF0F00);
+								//reset if fires right after starting to be pushed
+								if(Math.abs(y - initial_coords.y) < 2){
+									y = initial_coords.y;
+									hasBeenPushed = false;
+								}
 								startedMoving = false;
 								velocity.x = 0;
 								velocity.y = 0;
@@ -144,13 +147,10 @@ package entity.gadget
 							break;
 						case FlxObject.DOWN:
 							if(checkOtherBlocks(sentup) || FlxG.collide(sentup,parent.curMapBuf) || FlxG.collide(sentup, parent.map_bg_2)){
-								trace(hasBeenPushed+" pushed");
-								trace(FlxG.collide(sentup, parent.curMapBuf)+" mapbg");
-								trace(FlxG.collide(sentup, parent.map_bg_2)+" mapbg2");
-								trace(checkOtherBlocks(sentup)+" other blocks");
-								trace(initial_coords + " starting location")
-								trace(this.x +", "+ this.y + " current location")
-								sentup.makeGraphic(16, 2, 0xFFFF0F00);
+								if(Math.abs(y - initial_coords.y) < 2){
+									y = initial_coords.y;
+									hasBeenPushed = false;
+								}
 								startedMoving = false;
 								velocity.x = 0;
 								velocity.y = 0;
@@ -160,13 +160,10 @@ package entity.gadget
 							break;
 						case FlxObject.RIGHT:
 							if(checkOtherBlocks(sentlf) || FlxG.collide(sentlf,parent.curMapBuf) || FlxG.collide(sentlf, parent.map_bg_2)){
-								trace(hasBeenPushed+" pushed");
-								trace(FlxG.collide(sentlf, parent.curMapBuf)+" mapbg");
-								trace(FlxG.collide(sentlf, parent.map_bg_2)+" mapbg2");
-								trace(checkOtherBlocks(sentlf)+" other blocks");
-								trace(initial_coords + " starting location")
-								trace(this.x +", "+ this.y + " current location")
-								sentlf.makeGraphic(2, 16, 0xFFFF0F00);
+								if(Math.abs(x - initial_coords.x) < 2){
+									x = initial_coords.x;
+									hasBeenPushed = false;
+								}
 								startedMoving = false;
 								velocity.x = 0;
 								velocity.y = 0;
@@ -176,13 +173,10 @@ package entity.gadget
 							break;
 						case FlxObject.LEFT:
 							if(checkOtherBlocks(sentrt) || FlxG.collide(sentrt,parent.curMapBuf) || FlxG.collide(sentrt, parent.map_bg_2)){
-								trace(hasBeenPushed+" pushed");
-								trace(FlxG.collide(sentrt, parent.curMapBuf)+" mapbg");
-								trace(FlxG.collide(sentrt, parent.map_bg_2)+" mapbg2");
-								trace(checkOtherBlocks(sentrt)+" other blocks");
-								trace(initial_coords + " starting location")
-								trace(this.x +", "+ this.y + " current location")
-								sentrt.makeGraphic(2, 16, 0xFFFF0F00);
+								if(Math.abs(x - initial_coords.x) < 2){
+									x = initial_coords.x;
+									hasBeenPushed = false;
+								}
 								startedMoving = false;
 								velocity.x = 0;
 								velocity.y = 0;
@@ -191,9 +185,8 @@ package entity.gadget
 							}
 							break;
 						}
+					}
 					
-					}else if (pushdir != FlxObject.NONE){
-						 trace('no hecking direction');
 					}
 				}
 
@@ -219,26 +212,27 @@ package entity.gadget
                 }
 			}
             
-            if (Math.abs(x - initial_coords.x) >= 16 || Math.abs(y - initial_coords.y) >= 16) {
+            if (Math.abs(x - initial_coords.x) >= 15.5 || Math.abs(y - initial_coords.y) >= 15.5) {
 				if (!INCREMENTED_REG) {
 					if (!is_non_puzzle) {
 						Registry.GRID_PUZZLES_DONE++;
 					}
 					INCREMENTED_REG = true;
 				}
-				if ((x - initial_coords.x) > 16) {
+				if ((x - initial_coords.x) > 15.5) {
 					x = initial_coords.x + 16;
-				} else if ((x - initial_coords.x) < -16) {
+				} else if ((x - initial_coords.x) < -15.5) {
 					x = initial_coords.x - 16;
 				}
 				
-				if ((y - initial_coords.y > 16)) {
+				if ((y - initial_coords.y > 15.5)) {
 					y = initial_coords.y + 16;
-				} else if ((y - initial_coords.y) < -16) {
+				} else if ((y - initial_coords.y) < -15.5) {
 					y = initial_coords.y - 16;
 				}
                 velocity.x = velocity.y = 0;
             }
+			
             
             if (!startedMoving) timeToPush = 0.3;
             startedMoving = false;
@@ -252,13 +246,27 @@ package entity.gadget
 		}
 		
 		private function checkOtherBlocks(entity:FlxSprite):Boolean{
-			for each (var block:SinglePushBlock in Registry.subgroup_blocks){
+			/*for each (var block:SinglePushBlock in Registry.subgroup_blocks){
 				if (entity == null || block == null) continue;
 				if (block.overlaps(entity)){
-					trace(Registry.subgroup_blocks.indexOf(block))
+					trace(Registry.subgroup_blocks.indexOf(block));
+					trace(Registry.subgroup_blocks.indexOf(this));
+					trace(arrayIndex);
 					if(Registry.subgroup_blocks.indexOf(block) == arrayIndex){
 						return false;
 					}
+					return true;
+				}
+				
+			}*/
+			//probablly what we want
+			for (var i:String in Registry.subgroup_blocks){
+				var block:SinglePushBlock = Registry.subgroup_blocks[i];
+				if (entity == null || block == null) continue;
+				if(Registry.subgroup_blocks.indexOf(this)+"" == i){
+					 continue;
+				}
+				if (block.overlaps(entity)){
 					return true;
 				}
 				

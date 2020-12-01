@@ -2,7 +2,7 @@
 <project>
   <version/>
   <bgColor>0xcccccc</bgColor>
-  <viewPos x="59.051680809461686" y="-210.31255141907957"/>
+  <viewPos x="-295.4046242774566" y="-99.41911727246111"/>
   <firstLayersTop>false</firstLayersTop>
   <spriteEntries currentId="162">
     <group name="Events SL" idx="1" open="false">
@@ -192,7 +192,7 @@
       <sprite name="Huge_Fucking_Stag" idx="46" className="Huge_Fucking_Stag" image="src/res/sprites/npcs/forest_stag.png" width="64" height="80" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="64" boundsHeight="80" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="0" canEditFrames="true" lockRotation="false"/>
       <sprite name="Black_Thing" idx="47" className="Black_Thing" image="src/res/sprites/dame/dameblackthing.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" canEditFrames="true" lockRotation="false"/>
     </group>
-    <group name="Gadgets" idx="48" open="false">
+    <group name="Gadgets" idx="48" open="true">
       <group name="Gates" idx="49" open="false">
         <sprite name="Gate S" idx="50" className="Gate" image="src/res/sprites/dame/dame-gates.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="6" canEditFrames="true" lockRotation="false">
           <properties>
@@ -216,7 +216,7 @@
       </sprite>
       <sprite name="Hole SL" idx="56" className="Hole" image="src/res/sprites/gadgets/hole.png" width="16" height="16" preview="2" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" canEditFrames="true" lockRotation="false"/>
       <sprite name="SinglePushBlock SL" idx="57" className="SinglePushBlock" image="src/res/sprites/gadgets/pushyblocks.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="4" canEditFrames="true" lockRotation="false"/>
-      <sprite name="SinglePushBlock SL NP" idx="58" className="SinglePushBlock" image="src/res/sprites/gadgets/pushyblocks.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="2" canEditFrames="true" lockRotation="false">
+      <sprite name="SinglePushBlock SL NP" idx="58" className="SinglePushBlock" image="src/res/sprites/gadgets/pushyblocks.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="2" canEditFrames="true" lockRotation="false" selected="true">
         <properties>
           <type typeof="String" name="type" value="1" hidden="false"/>
         </properties>
@@ -321,7 +321,7 @@
       </sprite>
       <sprite name="Terminal_Gate" idx="90" className="Terminal_Gate" image="src/res/sprites/dame/dame_terminal_gate.png" width="16" height="64" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" canEditFrames="true" lockRotation="false"/>
     </group>
-    <group name="Enemies" idx="91" open="true">
+    <group name="Enemies" idx="91" open="false">
       <group name="etc" idx="92" open="false">
         <sprite name="Chaser" idx="93" className="Chaser" image="src/res/sprites/enemies/etc/chaser.png" width="16" height="32" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="32" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="1" canEditFrames="true" lockRotation="false"/>
         <sprite name="Suburb_Walker" idx="94" className="Suburb_Walker" image="src/res/sprites/enemies/suburb/suburb_walker.png" width="16" height="16" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="16" boundsHeight="16" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="1" canEditFrames="true" lockRotation="false">
@@ -342,8 +342,8 @@
         <sprite name="awer_2_" idx="99" className="awer2" image="src/res/sprites/enemies/etc/chaser.png" width="48" height="48" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="48" boundsHeight="48" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" canEditFrames="true" lockRotation="false"/>
         <sprite name="awer_2_" idx="100" className="awer2" image="src/res/sprites/enemies/etc/chaser.png" width="48" height="48" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="48" boundsHeight="48" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" canEditFrames="true" lockRotation="false"/>
       </group>
-      <group name="circus" idx="101" open="true">
-        <sprite name="Contort" idx="102" className="Contort" image="src/res/sprites/enemies/circus/contort_big.png" width="32" height="32" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="32" boundsHeight="32" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="1" canEditFrames="true" lockRotation="false" selected="true">
+      <group name="circus" idx="101" open="false">
+        <sprite name="Contort" idx="102" className="Contort" image="src/res/sprites/enemies/circus/contort_big.png" width="32" height="32" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="0" boundsWidth="32" boundsHeight="32" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="1" canEditFrames="true" lockRotation="false">
           <properties>
             <type typeof="String" name="alive" value="true" hidden="false"/>
             <type typeof="String" name="p" value="1" hidden="false"/>
@@ -2622,7 +2622,7 @@
         <sprite guid="37B5CA73-3420-140E-4CA1-B9398F41E316" x="672" y="720" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="86" frame="0"/>
       </spritelayer>
     </group>
-    <group name="BLANK" id="14" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="BLANK" id="14" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
       <maplayer name="BG" id="18" xScroll="1" yScroll="1" x="0" y="0" width="60" height="80" tileset="src/res/tilemaps/blank_tiles.png" tileWidth="16" tileHeight="16" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="16" tileSpacingY="16" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,3,3,3,3,3,3,3,41,41,41,41,41,41,41,41,41,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,17,18,18,18,18,18,18,20,0,0,0,0,0,17,18,20,0,0,0,3,3,3,3,3,3,3,3,3,3,41,41,41,41,41,41,41,41,41,41,0,0,0,0,0,0,0,17,20,0,0,17,20,0,0,0,17,18,20,0</row>
@@ -2869,10 +2869,19 @@
         <sprite guid="D82B04DB-5CA4-C1CA-581C-9D08E31DB5F4" x="376" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="70" frame="2"/>
         <sprite guid="16B0E7FE-C2DC-EA80-0692-760AB22DD2F7" x="376" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="70" frame="2"/>
       </spritelayer>
-      <spritelayer name="Stateless" id="20" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Stateless" id="20" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
         <sprite guid="14717F7B-3E0A-959A-BE17-1333AF6CE252" x="320" y="160" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="30" frame="0"/>
         <sprite guid="D28A5024-01D4-2A18-ADD5-935CCB90002C" x="320" y="320" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="30" frame="1"/>
         <sprite guid="90981B27-CF1D-5469-818E-77940C239C02" x="112" y="112" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="149" frame="6">
+          <properties/>
+        </sprite>
+        <sprite guid="9A02992F-2A59-0C0D-59B3-E7C36CE755B7" x="352" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="58" frame="4">
+          <properties/>
+        </sprite>
+        <sprite guid="5A079F7B-7232-7E3A-AA0A-B8D51B693223" x="352" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="58" frame="2">
+          <properties/>
+        </sprite>
+        <sprite guid="CDBEF3FB-2C9A-F4E8-B784-A2DEEEF763E6" x="384" y="176" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="58" frame="2">
           <properties/>
         </sprite>
       </spritelayer>
@@ -11915,7 +11924,7 @@
         <sprite guid="A5D14BC5-B605-8D91-A7D7-97AC96311E45" x="432" y="1168" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="95" frame="0"/>
       </spritelayer>
     </group>
-    <group name="STREET" id="12" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
+    <group name="STREET" id="12" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <maplayer name="BG" id="105" xScroll="1" yScroll="1" x="0" y="0" width="50" height="70" tileset="src/res/tilemaps/street_tilemap.png" tileWidth="16" tileHeight="16" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="16" tileSpacingY="16" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false" sharesTileProps="true">
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -12132,14 +12141,8 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
-      <spritelayer name="Stateful" id="108" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="true" selected="true">
+      <spritelayer name="Stateful" id="108" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="true">
         <sprite guid="0451D211-C1BC-B510-BC86-D93D94A3998F" x="528" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="149" frame="2">
-          <properties/>
-        </sprite>
-        <sprite guid="32E08371-7DD8-E3D2-8ADA-931DD6A71B0D" x="240" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="102" frame="1">
-          <properties/>
-        </sprite>
-        <sprite guid="03B431CB-9A40-4876-71DC-5877DB0397CB" x="224" y="272" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="102" frame="1">
           <properties/>
         </sprite>
         <sprite guid="0ED7AE3A-B0FB-8EBB-1B2D-D9973FBD36FE" x="208" y="458" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="24" frame="0">
